@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C10D7258-9967-4DC0-BE01-530D8D254009}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChineseConvertPinyin</RootNamespace>
+    <AssemblyName>ChineseConvertPinyin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ChineseConvertPinyin.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharSetMultiple\FourCharSet.cs" />
+    <Compile Include="CharSetMultiple\OneCharSet.cs" />
+    <Compile Include="CharSetMultiple\ThreeCharSet.cs" />
+    <Compile Include="CharSetMultiple\TwoCharSet.cs" />
+    <Compile Include="CharSetSingle\CharSetEight.cs" />
+    <Compile Include="CharSetSingle\CharSetFive.cs" />
+    <Compile Include="CharSetSingle\CharSetFour.cs" />
+    <Compile Include="CharSetSingle\CharSetNine.cs" />
+    <Compile Include="CharSetSingle\CharSetSeven.cs" />
+    <Compile Include="CharSetSingle\CharSetSix.cs" />
+    <Compile Include="ChineseCharIndex.cs" />
+    <Compile Include="ChineseCharSet.cs" />
+    <Compile Include="PinyinAlphabeticTone.cs" />
+    <Compile Include="PinyinMultiple.cs" />
+    <Compile Include="PinyinTone.cs" />
+    <Compile Include="PinyinSingle.cs" />
+    <Compile Include="ChineseToPinyin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
